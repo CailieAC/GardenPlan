@@ -18,24 +18,22 @@
                 <span asp-validation-for="PlantName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PlantCategory" class="control-label"></label>
-                <select asp-for="PlantCategory" class="form-control"></select>
-                <span asp-validation-for="PlantCategory" class="text-danger"></span>
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" asp-items="Model.Categories"></select>
             </div>
             <div class="form-group">
                 <label asp-for="PlantDate" class="control-label"></label>
-                <input asp-for="PlantDate" class="form-control" />
+                <input asp-for="PlantDate" type="date" class="form-control" />
                 <span asp-validation-for="PlantDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="HarvestDate" class="control-label"></label>
-                <input asp-for="HarvestDate" class="form-control" />
+                <input asp-for="HarvestDate" type="date" class="form-control" />
                 <span asp-validation-for="HarvestDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Sun" class="control-label"></label>
-                <select asp-for="Sun" class="form-control"></select>
-                <span asp-validation-for="Sun" class="text-danger"></span>
+                <select asp-for="Sun" asp-items="Model.SunReqs"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Spacing" class="control-label"></label>
@@ -44,8 +42,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Duration" class="control-label"></label>
-                <select asp-for="Duration" class="form-control"></select>
-                <span asp-validation-for="Duration" class="text-danger"></span>
+                <select asp-for="Duration" asp-items="Model.Durations"></select>
             </div>
             <div class="form-group">
                 <label asp-for="MaxTemp" class="control-label"></label>

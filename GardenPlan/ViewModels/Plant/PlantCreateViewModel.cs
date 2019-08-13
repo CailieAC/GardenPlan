@@ -14,7 +14,7 @@ namespace GardenPlan.ViewModels.Plant
     {
         public int Id { get; set; }
         public string PlantName { get; set; }
-        public PlantCategory PlantCategory { get; set; }
+        public PlantCategory Category { get; set; }
         public DateTime PlantDate { get; set; }
         public DateTime HarvestDate { get; set; }
         public Sun Sun { get; set; }
@@ -22,14 +22,53 @@ namespace GardenPlan.ViewModels.Plant
         public Duration Duration { get; set; }
         public int MaxTemp { get; set; }
         public int MinTemp { get; set; }
-     
+
+        [NotMapped]
+        public List<SelectListItem> Categories { get; set; }
+        [NotMapped]
+        public List<SelectListItem> SunReqs { get; set; }
+        [NotMapped]
+        public List<SelectListItem> Durations { get; set; }
+
+        public PlantCreateViewModel()
+        {
+            Categories = new List<SelectListItem>();
+            foreach (PlantCategory category in Enum.GetValues(typeof(PlantCategory)))
+            {
+                Categories.Add(new SelectListItem
+                {
+                    Value = ((int)category).ToString(),
+                    Text = category.ToString()
+                });
+            }
+
+            SunReqs = new List<SelectListItem>();
+            foreach (Sun sunReq in Enum.GetValues(typeof(Sun)))
+            {
+                SunReqs.Add(new SelectListItem
+                {
+                    Value = ((int)sunReq).ToString(),
+                    Text = sunReq.ToString()
+                });
+            }
+
+            Durations = new List<SelectListItem>();
+            foreach (Duration duration in Enum.GetValues(typeof(Duration)))
+            {
+                Durations.Add(new SelectListItem
+                {
+                    Value = ((int)duration).ToString(),
+                    Text = duration.ToString()
+                });
+            }
+        }
 
         public void Persist(ApplicationDbContext context)
         {
             Models.Plant plant = new Models.Plant
             {
                 PlantName = this.PlantName,
-                PlantCategory = this.PlantCategory,
+                PlantCategory = this.Category,
                 PlantDate = this.PlantDate,
                 HarvestDate = this.HarvestDate,
                 Sun = this.Sun,
