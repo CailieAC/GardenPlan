@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GardenPlan.ViewModels.Plant;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GardenPlan.Controllers
@@ -10,6 +11,12 @@ namespace GardenPlan.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            PlantCreateViewModel plantCreateViewModel = new PlantCreateViewModel();
             return View();
         }
     }

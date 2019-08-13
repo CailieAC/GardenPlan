@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace GardenPlan.Models
 {
-    public enum PlantCategory
+    public enum Water
     {
-        Vegetable,
-        Fruit,
-        Herb,
-        Legume,
-        Other
+        Frequent,
+        Infrequent,
+
     };
 }

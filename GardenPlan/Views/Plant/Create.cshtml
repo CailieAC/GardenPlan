@@ -1,0 +1,73 @@
+﻿@model GardenPlan.ViewModels.Plant.PlantCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PlantCreateViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlantName" class="control-label"></label>
+                <input asp-for="PlantName" class="form-control" />
+                <span asp-validation-for="PlantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantCategory" class="control-label"></label>
+                <select asp-for="PlantCategory" class="form-control"></select>
+                <span asp-validation-for="PlantCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantDate" class="control-label"></label>
+                <input asp-for="PlantDate" class="form-control" />
+                <span asp-validation-for="PlantDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HarvestDate" class="control-label"></label>
+                <input asp-for="HarvestDate" class="form-control" />
+                <span asp-validation-for="HarvestDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sun" class="control-label"></label>
+                <select asp-for="Sun" class="form-control"></select>
+                <span asp-validation-for="Sun" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spacing" class="control-label"></label>
+                <input asp-for="Spacing" class="form-control" />
+                <span asp-validation-for="Spacing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <select asp-for="Duration" class="form-control"></select>
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxTemp" class="control-label"></label>
+                <input asp-for="MaxTemp" class="form-control" />
+                <span asp-validation-for="MaxTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinTemp" class="control-label"></label>
+                <input asp-for="MinTemp" class="form-control" />
+                <span asp-validation-for="MinTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

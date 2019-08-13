@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GardenPlan.Controllers
 {
-    public class GardenPlanController : Controller
+    public class PlanForGardenController : Controller
     {
         public IActionResult Index()
         {

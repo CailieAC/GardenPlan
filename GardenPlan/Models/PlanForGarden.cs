@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GardenPlan.Models
 {
-    public class GardenPlan
+    public class PlanForGarden
     {
         public int Id { get; set; }
         public List<Plant> Plants { get; set; }
