@@ -41,5 +41,12 @@ namespace GardenPlan.Controllers
             model.Persist(context);
             return RedirectToAction(controllerName: "Plant", actionName: "Index");
         }
+
+        [HttpGet]
+        public IActionResult Details(int plantId)
+        {
+            PlantDetailsViewModel plant = PlantDetailsViewModel.GetPlant(plantId, context);
+            return View(plant);
+        }
     }
 }

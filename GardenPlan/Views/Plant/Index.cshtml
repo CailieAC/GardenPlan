@@ -17,14 +17,14 @@
 
         <tr>
             <th>Name</th>
-            <th>Description</th>
+            <th>Category</th>
         </tr>
 
         @foreach (var plant in Model)
         {
-            <tr>
-                <td>@plant.PlantName</td>
-                <td>@plant.PlantCategory</td>
-            </tr>
+        <tr>
+            <td>@Html.ActionLink(plant.PlantName, "Details", new { PlantId = plant.Id })</td>
+            <td>@plant.PlantCategory</td>
+        </tr>
         }
     </table>
