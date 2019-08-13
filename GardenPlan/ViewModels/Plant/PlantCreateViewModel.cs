@@ -77,7 +77,8 @@ namespace GardenPlan.ViewModels.Plant
                 MaxTemp = this.MaxTemp,
                 MinTemp = this.MinTemp
             };
-            context.Plants.Add(plant);
+            context.Add(plant);
+            context.SaveChanges();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GardenPlan.Data;
+using GardenPlan.Models;
 using GardenPlan.ViewModels.Plant;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,9 @@ namespace GardenPlan.Controllers
 
         public IActionResult Index()
         {
-            List<PlantListItemViewModel> plants = PlantListItemViewModel.GetPlants(context);
+            //List<PlantListItemViewModel> plants = PlantListItemViewModel.GetPlants(context);
+            //return View(plants);
+            List<Plant> plants = context.Plants.ToList();
             return View(plants);
         }
 

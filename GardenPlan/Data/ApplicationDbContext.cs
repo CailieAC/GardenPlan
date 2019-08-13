@@ -17,9 +17,6 @@ namespace GardenPlan.Data
         {
         }
 
-        public DbSet<GardenPlan.ViewModels.Plant.PlantCreateViewModel> PlantCreateViewModel { get; set; }
-
-        public DbSet<GardenPlan.ViewModels.Plant.PlantDetailsViewModel> PlantDetailsViewModel { get; set; }
 
     }
 }
