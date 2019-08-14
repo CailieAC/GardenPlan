@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GardenPlan.Data.Migrations
+namespace GardenPlan.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190814025201_PlantDateHarvestDateChangeToTime")]
-    partial class PlantDateHarvestDateChangeToTime
+    [Migration("20190814030913_Reset")]
+    partial class Reset
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

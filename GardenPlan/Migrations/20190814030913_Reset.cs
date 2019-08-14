@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace GardenPlan.Data.Migrations
+namespace GardenPlan.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class Reset : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,27 @@ namespace GardenPlan.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Plants",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PlantName = table.Column<string>(nullable: true),
+                    PlantCategory = table.Column<int>(nullable: false),
+                    PlantTime = table.Column<string>(nullable: true),
+                    HarvestTime = table.Column<string>(nullable: true),
+                    Sun = table.Column<int>(nullable: false),
+                    Spacing = table.Column<string>(nullable: true),
+                    Duration = table.Column<int>(nullable: false),
+                    MaxTemp = table.Column<int>(nullable: false),
+                    MinTemp = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Plants", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -209,6 +230,9 @@ namespace GardenPlan.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Plants");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

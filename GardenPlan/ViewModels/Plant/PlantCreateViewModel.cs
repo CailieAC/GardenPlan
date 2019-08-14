@@ -13,14 +13,20 @@ namespace GardenPlan.ViewModels.Plant
     public class PlantCreateViewModel
     {
         public int Id { get; set; }
+        [Display(Name = "Name")]
         public string PlantName { get; set; }
         public PlantCategory Category { get; set; }
+        [Display(Name = "When to Plant")]
         public string PlantTime { get; set; }
+        [Display(Name = "When to Harvest")]
         public string HarvestTime { get; set; }
         public Sun Sun { get; set; }
+        [Display(Name = "Spacing (inches)")]
         public string Spacing { get; set; }
         public Duration Duration { get; set; }
+        [Display(Name = "Maximum Temperature (°F)")]
         public int MaxTemp { get; set; }
+        [Display(Name = "Minimum Temperature (°F)")]
         public int MinTemp { get; set; }
 
         [NotMapped]

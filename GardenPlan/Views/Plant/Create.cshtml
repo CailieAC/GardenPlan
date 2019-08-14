@@ -1,12 +1,11 @@
 ﻿@model GardenPlan.ViewModels.Plant.PlantCreateViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add Plant to Plant Database";
 }
 
-<h1>Create</h1>
+<h1>Add a New Plant</h1>
 
-<h4>PlantCreateViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -23,12 +22,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="PlantTime" class="control-label"></label>
-                <input asp-for="PlantTime" type="date" class="form-control" />
+                <input asp-for="PlantTime" class="form-control" />
                 <span asp-validation-for="PlantTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="HarvestTime" class="control-label"></label>
-                <input asp-for="HarvestTime" type="date" class="form-control" />
+                <input asp-for="HarvestTime" class="form-control" />
                 <span asp-validation-for="HarvestTime" class="text-danger"></span>
             </div>
             <div class="form-group">
