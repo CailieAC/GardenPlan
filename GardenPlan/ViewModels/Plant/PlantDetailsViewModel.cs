@@ -12,8 +12,8 @@ namespace GardenPlan.ViewModels.Plant
         public int Id { get; set; }
         public string PlantName { get; set; }
         public PlantCategory PlantCategory { get; set; }
-        public DateTime PlantDate { get; set; }
-        public DateTime HarvestDate { get; set; }
+        public string PlantTime { get; set; }
+        public string HarvestTime { get; set; }
         public Sun Sun { get; set; }
         public string Spacing { get; set; }
         public Duration Duration { get; set; }
@@ -32,8 +32,8 @@ namespace GardenPlan.ViewModels.Plant
             this.Id = plant.Id;
             this.PlantName = plant.PlantName;
             this.PlantCategory = plant.PlantCategory;
-            this.PlantDate = plant.PlantDate;
-            this.HarvestDate = plant.HarvestDate;
+            this.PlantTime = plant.PlantTime;
+            this.HarvestTime = plant.HarvestTime;
             this.Sun = this.Sun;
             this.Spacing = this.Spacing;
             this.Duration = plant.Duration;

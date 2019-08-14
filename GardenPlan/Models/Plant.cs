@@ -10,8 +10,8 @@ namespace GardenPlan.Models
         public int Id { get; set; }
         public string PlantName { get; set; }
         public PlantCategory PlantCategory { get; set; }
-        public DateTime PlantDate { get; set; }
-        public DateTime HarvestDate { get; set; }
+        public string PlantTime { get; set; }
+        public string HarvestTime { get; set; }
         public Sun Sun { get; set; }
         public string Spacing { get; set; }
         public Duration Duration { get; set; }

@@ -24,11 +24,11 @@ namespace GardenPlan.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Duration = table.Column<int>(nullable: false),
-                    HarvestDate = table.Column<DateTime>(nullable: false),
+                    HarvestTime = table.Column<DateTime>(nullable: false),
                     MaxTemp = table.Column<int>(nullable: false),
                     MinTemp = table.Column<int>(nullable: false),
                     PlantCategory = table.Column<int>(nullable: false),
-                    PlantDate = table.Column<DateTime>(nullable: false),
+                    PlantTime = table.Column<DateTime>(nullable: false),
                     PlantName = table.Column<string>(nullable: true),
                     Spacing = table.Column<string>(nullable: true),
                     Sun = table.Column<int>(nullable: false)
@@ -45,11 +45,11 @@ namespace GardenPlan.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Duration = table.Column<int>(nullable: false),
-                    HarvestDate = table.Column<DateTime>(nullable: false),
+                    HarvestTime = table.Column<DateTime>(nullable: false),
                     MaxTemp = table.Column<int>(nullable: false),
                     MinTemp = table.Column<int>(nullable: false),
                     PlantCategory = table.Column<int>(nullable: false),
-                    PlantDate = table.Column<DateTime>(nullable: false),
+                    PlantTime = table.Column<DateTime>(nullable: false),
                     PlantName = table.Column<string>(nullable: true),
                     Spacing = table.Column<string>(nullable: true),
                     Sun = table.Column<int>(nullable: false)

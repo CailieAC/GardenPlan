@@ -29,7 +29,7 @@ namespace GardenPlan.Data.Migrations
 
                     b.Property<int>("Duration");
 
-                    b.Property<DateTime>("HarvestDate");
+                    b.Property<DateTime>("HarvestTime");
 
                     b.Property<int>("MaxTemp");
 
@@ -37,7 +37,7 @@ namespace GardenPlan.Data.Migrations
 
                     b.Property<int>("PlantCategory");
 
-                    b.Property<DateTime>("PlantDate");
+                    b.Property<DateTime>("PlantTime");
 
                     b.Property<string>("PlantName");
 
