@@ -9,7 +9,7 @@ using GardenPlan.ViewModels.Plant;
 
 namespace GardenPlan.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string >
     {
         public DbSet<Plant> Plants { get; set; }
 
